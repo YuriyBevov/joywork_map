@@ -1,0 +1,31 @@
+.view-toggler {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  & button,
+  & a {
+    @extend .btn-reset;
+    @extend .flex-centered-content;
+    margin: 0 3px;
+    width: 32px;
+    height: 32px;
+
+    border-radius: 3px;
+    border: 1px solid #DEDEDE;
+    background: var(--linear, linear-gradient(180deg, #FEFEFE 0%, #F6F6F6 100%));
+
+    svg {
+      fill: #666666;
+    }
+
+    &.active {
+      border-radius: 3px;
+      border: 1px solid #4CAF50;
+      background: #4CAF50;
+
+      svg {
+        fill: var(--white);
+      }
+    }
+  }
+}

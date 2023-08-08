@@ -1,0 +1,44 @@
+.card {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+
+  address {
+    font-style: normal;
+  }
+
+  &__preview-image {
+    width: 100%;
+    max-width: 280px;
+    height: 100%;
+    max-height: 180px;
+    object-fit: contain;
+  }
+
+  &__marketplace-icon {
+    width: 100%;
+    height: 100%;
+    max-height: 20px;
+    object-fit: contain;
+  }
+
+  &__metro-icon {
+    margin-right: 5px;
+    fill: var(--skyblue);
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+    &-side {
+      display: flex;
+      align-items: center;
+    }
+
+    &-side:nth-child(1) {
+      margin-right: auto;
+    }
+  }
+}

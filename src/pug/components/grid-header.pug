@@ -1,0 +1,23 @@
+.grid-header
+  .grid-header__side
+    span.lw-text Показано: <span class="lw-text--fw-medium lw-text--sm">85 вариантов</span>
+
+  .grid-header__side
+    .sort
+      button.sort__btn.active По дате добавления
+
+      button.sort__btn По цене
+
+      svg(width="20" height="20")
+        use(xlink:href="./assets/sprite.svg#icon-sort")
+
+    .view-toggler
+      a(href="#" aria-label="Показать плиткой").active
+        svg(width="24" height="24")
+          use(xlink:href="./assets/sprite.svg#icon-card-view")
+
+      a(href="#" aria-label="Показать таблицей")
+        svg(width="20" height="20")
+          use(xlink:href="./assets/sprite.svg#icon-table-view")
+
+    button.lw-grid-toggler Показать карту

@@ -1,0 +1,17 @@
+.grid-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  background-color: var(--white);
+
+  &__side {
+    display: flex;
+    align-items: center;
+
+    &:nth-child(1) {
+      margin-right: auto;
+    }
+  }
+}
