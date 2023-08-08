@@ -3,7 +3,8 @@
   align-items: center;
   margin: 0 10px;
   & button,
-  & a {
+  & a,
+  & span {
     @extend .btn-reset;
     @extend .flex-centered-content;
     margin: 0 3px;
@@ -27,5 +28,9 @@
         fill: var(--white);
       }
     }
+  }
+
+  & span {
+    cursor: initial;
   }
 }

@@ -12,18 +12,6 @@
     max-width: var(--container-fluid-width);
   }
 
-  &-title {
-
-  }
-
-  &-subtitle {
-
-  }
-
-  &-main-text {
-
-  }
-
   &-text {
     font-size: 14px;
     color: var(--dark);
@@ -86,6 +74,12 @@
 
     &--transparent {
       background: none;
+    }
+  }
+
+  &-icon-bg-light {
+    svg {
+      fill: #bdbdbd;
     }
   }
 }

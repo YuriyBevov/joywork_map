@@ -1,0 +1,23 @@
+.grid.grid--fullwidth(style="margin-left:100px;margin-top:100px;")
+  .grid-side
+    include ../components/grid-header-table-view
+
+    .grid-list.grid-list--table
+      include ../components/card-vertical
+      include ../components/card-vertical
+      include ../components/card-vertical
+      include ../components/card-vertical
+      include ../components/card-vertical
+      include ../components/card-vertical
+  .grid-side.grid-side--map
+    .map-container(style="background-image: url('../assets/img/map-img.png');")
+
+      .map-balloon
+        img(src="./assets/img/object-img.png" alt="" width="180" height="90").card__preview-image
+
+        svg(width="16" height="16")
+          use(xlink:href="./assets/sprite.svg#icon-close")
+        .map-balloon-content
+          address Свердловская область, Екатеринбург <br>ул. Крестинского, 6
+          span 49 600 000 p
+          small Квартира 42м2 10 этаж из 10

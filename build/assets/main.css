@@ -447,6 +447,8 @@ body {
   line-height: 1.2;
   color: var(--main-color);
   background-color: var(--main-bg-color);
+  overflow: hidden;
+  overflow-y: auto;
 }
 body.body-locked {
   overflow: hidden;
@@ -476,7 +478,7 @@ a {
   flex-wrap: wrap;
 }
 
-.flex-centered-content, .view-toggler button, .view-toggler a, .lw-grid-toggler, .sort__btn, .lw-btn-xs {
+.flex-centered-content, .view-toggler button, .view-toggler a, .view-toggler span, .lw-grid-toggler, .sort__btn, .lw-btn-xs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -488,7 +490,7 @@ a {
   justify-content: center;
 }
 
-.flex-column {
+.flex-column, .card-vertical__side-item--column, .grid-list--table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -528,7 +530,7 @@ a {
   border: 0;
 }
 
-.btn-reset, .view-toggler button, .view-toggler a, .lw-grid-toggler, .sort__btn, .lw-btn-xs {
+.btn-reset, .view-toggler button, .view-toggler a, .view-toggler span, .lw-grid-toggler, .sort__btn, .lw-btn-xs {
   border: none;
   padding: 0;
   background: transparent;
@@ -630,6 +632,9 @@ a {
 }
 .lw-btn-xs--transparent {
   background: none;
+}
+.lw-icon-bg-light svg {
+  fill: #bdbdbd;
 }
 
 /* Компоненты */
@@ -746,7 +751,7 @@ a {
   align-items: center;
   margin: 0 10px;
 }
-.view-toggler button, .view-toggler a {
+.view-toggler button, .view-toggler a, .view-toggler span {
   margin: 0 3px;
   width: 32px;
   height: 32px;
@@ -754,16 +759,19 @@ a {
   border: 1px solid #DEDEDE;
   background: var(--linear, linear-gradient(180deg, #FEFEFE 0%, #F6F6F6 100%));
 }
-.view-toggler button svg, .view-toggler a svg {
+.view-toggler button svg, .view-toggler a svg, .view-toggler span svg {
   fill: #666666;
 }
-.view-toggler button.active, .view-toggler a.active {
+.view-toggler button.active, .view-toggler a.active, .view-toggler span.active {
   border-radius: 3px;
   border: 1px solid #4CAF50;
   background: #4CAF50;
 }
-.view-toggler button.active svg, .view-toggler a.active svg {
+.view-toggler button.active svg, .view-toggler a.active svg, .view-toggler span.active svg {
   fill: var(--white);
+}
+.view-toggler span {
+  cursor: initial;
 }
 
 .map-balloon {
@@ -826,7 +834,8 @@ a {
   -ms-grid-columns: auto 900px;
   grid-template-columns: auto 900px;
   max-width: 1920px;
-  overflow: hiddden;
+  height: 100%;
+  min-height: 100vh;
 }
 .grid .grid-side--map {
   position: relative;
@@ -851,5 +860,69 @@ a {
   -ms-transform: translateX(100vw);
   transform: translateX(100vw);
 }
+.grid-list--table a {
+  -webkit-transition: background-color var(--main-transition);
+  -o-transition: background-color var(--main-transition);
+  transition: background-color var(--main-transition);
+}
+.grid-list--table a:hover, .grid-list--table a:focus {
+  background-color: #f2f3f3;
+}
+
+.card-vertical {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid #dedede;
+}
+.card-vertical__side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1;
+}
+.card-vertical__side:nth-child(1) {
+  margin-right: auto;
+  padding-right: 30px;
+}
+.card-vertical__side:nth-child(1) img {
+  margin-right: 20px;
+}
+.card-vertical__side:nth-child(1) span {
+  color: var(--black);
+}
+.card-vertical__side-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 10px;
+  color: var(--black) !important;
+}
+.card-vertical__side-item img {
+  max-height: 15px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.card-vertical__side-item--column {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.card-vertical__side-item--column span {
+  display: block;
+  margin-bottom: 6px;
+}
+
 /* Модальные окна */
 /*# sourceMappingURL=main.css.map */

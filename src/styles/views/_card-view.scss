@@ -2,7 +2,9 @@
   display: grid;
   grid-template-columns: auto 900px;
   max-width: 1920px;
-  overflow: hiddden;
+
+  height: 100%;
+  min-height: 100vh;
 
   .grid-side--map {
     position: relative;
