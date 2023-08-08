@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   margin: 0 10px;
+
   &__btn {
     @extend .btn-reset;
     @extend .flex-centered-content;
@@ -9,6 +10,7 @@
 
     &.active {
       text-decoration: underline;
+      cursor: initial;
     }
   }
 

@@ -724,6 +724,7 @@ a {
 }
 .sort__btn.active {
   text-decoration: underline;
+  cursor: initial;
 }
 .sort svg {
   fill: #2A2A2A;
