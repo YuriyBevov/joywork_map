@@ -2,7 +2,7 @@
   &-list--table {
     @extend .flex-column;
 
-    a {
+    .card-vertical {
       transition: background-color var(--main-transition);
       &:hover,
       &:focus {
