@@ -470,7 +470,7 @@ a {
 }
 
 /* flex*/
-.flex-wrap, .grid-list {
+.flex-wrap, .grid-list, .card-vertical {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,7 +490,7 @@ a {
   justify-content: center;
 }
 
-.flex-column, .card-vertical__side-item--column, .grid-list--table {
+.flex-column, .grid-list--table, .card-vertical__side-item--column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -686,6 +686,68 @@ a {
   margin-right: auto;
 }
 
+.card-vertical {
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  padding-right: 120px;
+  border-top: 1px solid #dedede;
+}
+.card-vertical__side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1;
+}
+.card-vertical__side:nth-child(1) {
+  margin-right: auto;
+  padding-right: 30px;
+}
+.card-vertical__side:nth-child(1) img {
+  margin-right: 20px;
+}
+.card-vertical__side:nth-child(1) span {
+  color: var(--black);
+}
+.card-vertical__side--right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.card-vertical__side-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 10px;
+  color: var(--black) !important;
+}
+.card-vertical__side-item img {
+  max-height: 15px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.card-vertical__side-item--column {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.card-vertical__side-item--column span {
+  display: block;
+  margin-bottom: 6px;
+}
+
 .grid-header {
   position: sticky;
   top: 0;
@@ -695,8 +757,14 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 15px 10px;
+  padding: 10px;
+  margin-bottom: 10px;
   background-color: var(--white);
+}
+@media (max-width: 1750px) {
+  .grid-header {
+    padding-bottom: 35px;
+  }
 }
 .grid-header__side {
   display: -webkit-box;
@@ -728,6 +796,13 @@ a {
 }
 .sort svg {
   fill: #2A2A2A;
+}
+@media (max-width: 1750px) {
+  .sort {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 }
 
 .lw-grid-toggler {
@@ -838,6 +913,18 @@ a {
   height: 100%;
   min-height: 100vh;
 }
+@media (max-width: 1620px) {
+  .grid {
+    -ms-grid-columns: auto 600px;
+    grid-template-columns: auto 600px;
+  }
+}
+@media (max-width: 1360px) {
+  .grid {
+    -ms-grid-columns: auto 500px;
+    grid-template-columns: auto 500px;
+  }
+}
 .grid .grid-side--map {
   position: relative;
   -webkit-transform: translateX(0);
@@ -868,61 +955,6 @@ a {
 }
 .grid-list--table a:hover, .grid-list--table a:focus {
   background-color: #f2f3f3;
-}
-
-.card-vertical {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  padding: 10px;
-  border-top: 1px solid #dedede;
-}
-.card-vertical__side {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  line-height: 1;
-}
-.card-vertical__side:nth-child(1) {
-  margin-right: auto;
-  padding-right: 30px;
-}
-.card-vertical__side:nth-child(1) img {
-  margin-right: 20px;
-}
-.card-vertical__side:nth-child(1) span {
-  color: var(--black);
-}
-.card-vertical__side-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0 10px;
-  color: var(--black) !important;
-}
-.card-vertical__side-item img {
-  max-height: 15px;
-  -o-object-fit: contain;
-  object-fit: contain;
-}
-.card-vertical__side-item--column {
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
-.card-vertical__side-item--column span {
-  display: block;
-  margin-bottom: 6px;
 }
 
 /* Модальные окна */

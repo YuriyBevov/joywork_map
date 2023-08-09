@@ -12,7 +12,8 @@ var grid = document.querySelector('.grid');
 
 if (toggler) {
   toggler.addEventListener('click', function () {
-    return grid.classList.toggle('grid--fullwidth');
+    grid.classList.toggle('grid--fullwidth');
+    grid.classList.contains('grid--fullwidth') ? toggler.innerText = 'Показать карту' : toggler.innerText = 'Скрыть карту';
   });
 }
 

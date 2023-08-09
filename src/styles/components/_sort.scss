@@ -17,6 +17,12 @@
   svg {
     fill: #2A2A2A;
   }
+
+  @include m-b-down(1750px) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 }
 
 .lw-grid-toggler {
