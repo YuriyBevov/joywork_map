@@ -1,58 +1,104 @@
-.card-vertical {
+.card-horizontal {
   position: relative;
-  @extend .flex-wrap;
-  align-items: center;
-  width: 100%;
-  padding: 10px;
+  display: flex;
 
   padding-right: 120px;
-  border-top: 1px solid #dedede;
 
-  &__side {
+  border-top: 1px solid #dedede;
+  &__content {
     display: flex;
     align-items: center;
-    line-height: 1;
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 0;
 
-    &:nth-child(1) {
-      margin-right: auto;
-      padding-right: 30px;
-
-      img {
-        margin-right: 20px;
-      }
-
-      span {
-        color: var(--black);
-      }
-    }
-
-    &--right {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    &-item {
+    &-side {
       display: flex;
       align-items: center;
-      margin: 0 10px;
-      color: var(--black) !important;
+      margin-bottom: 10px;
 
       img {
-        max-height: 15px;
-        object-fit: contain;
+        margin-right: 10px;
       }
 
-      &--column {
-        @extend .flex-column;
-        align-items: flex-start;
+      &--address {
+        flex-grow: 1;
 
-        span {
-          display: block;
-          margin-bottom: 6px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+      }
+
+      &--chars {
+        justify-content: flex-end;
+        min-width: 440px;
+      }
+
+      &--preview {
+        min-width: 300px;
+        max-width: 350px;
+      }
+
+      &:nth-child(1) {
+        padding-right: 20px;
+        margin-right: auto;
+      }
+
+      &-item {
+        margin-right: 20px;
+
+        &--column {
+          display: flex;
+          flex-direction: column;
         }
       }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+.grid:not(.grid--fullwidth) {
+  .card-horizontal {
+    &__content {
+      flex-direction: column;
+      align-items: flex-start;
+
+      &-side {
+
+        &--address,
+        &--chars {
+          padding: 0;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+        }
+
+        &-item {
+          @extend .flex-centered-content;
+          padding: 5px 0;
+          &--column {
+            flex-direction: row;
+
+            span {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    &__controls {
+      top: 23px;
+      transform: none;
     }
   }
 }

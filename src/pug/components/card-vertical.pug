@@ -1,21 +1,23 @@
+.card-horizontal
+  a(href="#" data-modal-anchor="about").card-horizontal__content
+    .card-horizontal__content-side.card-horizontal__content-side--preview
+      img(src="./assets/img/object-img.png" alt="" width="76" height="50")
+      span.lw-text Помещение свободного назначения
+    .card-horizontal__content-side.card-horizontal__content-side--address
+      address.lw-text.lw-text--black Санкт-Петербург, Колпинский р-н, Колпино, пр-т Ленина, 16/11
 
-.card-vertical
-  a(href="#" data-modal-anchor="about").card-vertical__side.card-vertical__side--left
-    img(src="./assets/img/object-img.png" alt="" width="76" height="50")
-    span.lw-text Помещение свободного назначения
+    .card-horizontal__content-side.card-horizontal__content-side--chars
+      .card-horizontal__content-side-item
+        span.lw-text.lw-text--light 29-07-2023
+      .card-horizontal__content-side-item
+        img(src="./assets/img/marketplace-logo.png" alt="Авито" width="50" height="20")
+      .card-horizontal__content-side-item
+        span.lw-text.lw-text--black.lw-text--fw-bold 49 500 000 р.
+      .card-horizontal__content-side-item.card-horizontal__content-side-item--column
+        span.lw-text.lw-text--light 42м3
+        span.lw-text.lw-text--light 10 этаж из 10
 
-  .card-vertical__side.card-vertical__side--middle
-    .card-vertical__side-item
-      img(src="./assets/img/marketplace-logo.png" alt="Авито" width="42" height="12")
-    .card-vertical__side-item
-      span.lw-text.lw-text--xs.lw-text--light 29-07-2023
-    .card-vertical__side-item
-      span.lw-text.lw-text--sm.lw-text--fw-bold 49 500 000 р.
-    .card-vertical__side-item.card-vertical__side-item--column
-      span 42м2
-      span 10 этаж из 10
-
-  .card-vertical__side.card-vertical__side--right
+  .card-horizontal__controls
     button.lw-btn-xs.lw-btn-xs--accent
       svg(width="20" height="10")
         use(xlink:href="./assets/sprite.svg#icon-pdf")
@@ -25,3 +27,4 @@
     button.lw-btn-xs.lw-btn-xs--noborder.lw-btn-xs--transparent.lw-icon-bg-light
       svg(width="18" height="18")
         use(xlink:href="./assets/sprite.svg#icon-menu")
+

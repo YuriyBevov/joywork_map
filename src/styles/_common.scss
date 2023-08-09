@@ -14,10 +14,15 @@
 
   &-text {
     font-size: 14px;
+    line-height: 1.1;
     color: var(--dark);
 
     &--light {
       color: var(--info);
+    }
+
+    &--black {
+      color: var(--black);
     }
 
     &--lg {

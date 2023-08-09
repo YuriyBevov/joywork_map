@@ -1,11 +1,8 @@
 .card {
-  /*width: 100%;
-  max-width: 300px;*/
   flex-grow: 1;
   max-width: calc(100% / 3);
   padding: 10px;
 
-  /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
   @include m-b-down(1600px) {
     max-width: 50%;
   }
@@ -18,9 +15,6 @@
     width: 100%;
     height: auto;
     max-height: 240px;
-    /*max-width: 280px;
-    height: 100%;
-    max-height: 180px;*/
     object-fit: contain;
   }
 
