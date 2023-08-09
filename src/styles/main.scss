@@ -16,8 +16,14 @@
 @import "./components/view-toggler";
 @import "./components/map-balloon";
 
+@import "./components/modal-slider";
+@import "./components/modal-content";
+
 @import "./views/card-view";
 @import "./views/table-view";
 /* Модальные окна */
+
+@import "./modals/modal";
+@import "./modals/about-modal";
 
 

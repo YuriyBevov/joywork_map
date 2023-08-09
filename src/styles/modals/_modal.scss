@@ -1,0 +1,72 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 199;
+
+  display: none;
+
+  &.active {
+    display: block;
+
+    animation: fadeIn 0.4s ease-in;
+  }
+
+  &-closer {
+    @extend .flex-centered-content;
+    @extend .btn-reset;
+
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    svg {
+      fill: var(--text-color);
+    }
+    z-index: 99;
+  }
+
+  &__overlay {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+  }
+
+  &__content {
+    position: relative;
+    @extend .flex-column;
+    width: 75vw;
+    max-width: 900px;
+
+    height: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    overflow-y: auto;
+
+    background-color: var(--white);
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.10);
+  }
+
+  &__body {
+    @extend .flex-column;
+    align-items: center;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

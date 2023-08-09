@@ -1,0 +1,64 @@
+.slider {
+
+  .swiper {
+
+    &-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &-slide {
+      a {
+        @extend .flex-centered-content;
+
+        img {
+          width: 100%;
+          height: auto;
+          max-height: 420px;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &-button-next,
+    &-button-prev {
+      width: 40px;
+      height: 40px;
+      padding: 5px;
+      border-radius: 50%;
+      border: 1px solid var(--dark);
+      color: var(--dark);
+    }
+
+    &-button-next::after,
+    &-button-prev::after {
+      font-size: 20px;
+    }
+  }
+
+  .apartment-slider {
+    margin-bottom: 20px;
+  }
+
+  .apartment-slider-thumbs {
+
+    .swiper-slide {
+      width: 80px;
+      height: 50px;
+      opacity: .6;
+
+      transition: opacity var(--main-transition);
+
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 50px;
+        object-fit: contain;
+      }
+
+      &-thumb-active {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+-
+  const commonChars = [
+    { name: 'Общая площадь:', value: '65.9 м2' },
+    { name: 'Площадь комнат:', value: '17,3+18,1 м2' },
+    { name: 'Площадь кухни:', value: '15.4 м2' },
+    { name: 'Этаж:', value: '6 из 12' },
+    { name: 'Тип сделки:', value: 'Прямая продажа' },
+  ]
+
+-
+  const houseChars = [
+    { name: 'Материал:', value: 'Кирпично-монолитный' },
+    { name: 'Тип:', value: 'Кирп. монолитный' },
+    { name: 'Год постройки:', value: '2015' },
+  ]
+
+.modal.about-modal#about
+  .modal__overlay
+    button.modal-closer
+      svg(width="16" height="16")
+        use(xlink:href="./assets/sprite.svg#icon-close")
+
+    .modal__content
+      include ../components/modal-slider
+
+      include ../components/modal-content
