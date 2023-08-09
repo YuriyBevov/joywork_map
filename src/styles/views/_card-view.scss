@@ -6,14 +6,6 @@
   height: 100%;
   min-height: 100vh;
 
-  /*@include m-b-down(1620px) {
-    grid-template-columns: auto 600px;
-  }
-
-  @include m-b-down(1360px) {
-    grid-template-columns: auto 500px;
-  }*/
-
   &-side:first-child {
     padding-right: 10px;
   }
@@ -41,7 +33,6 @@
     .card {
       max-width: calc(100% / 6);
 
-      /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
       @include m-b-down(1620px) {
         max-width: calc(100% / 4);
       }

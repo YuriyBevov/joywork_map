@@ -19,6 +19,10 @@
 
       img {
         margin-right: 10px;
+        display: block;
+
+        width: fit-content;
+        object-fit: contain;
       }
 
       &--address {
@@ -37,6 +41,10 @@
       &--preview {
         min-width: 300px;
         max-width: 350px;
+
+        img {
+          max-height: 50px;
+        }
       }
 
       &:nth-child(1) {
@@ -50,6 +58,10 @@
         &--column {
           display: flex;
           flex-direction: column;
+        }
+
+        img {
+          max-height: 20px;
         }
       }
     }
