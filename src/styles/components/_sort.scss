@@ -24,16 +24,3 @@
     bottom: 0;
   }
 }
-
-.lw-grid-toggler {
-  @extend .btn-reset;
-  @extend .flex-centered-content;
-  margin: 0 10px;
-  width: fit-content;
-  min-height: 32px;
-  padding: 5px 8px;
-  color: #666666;
-  border-radius: 3px;
-  border: 1px solid #DEDEDE;
-  background: var(--linear, linear-gradient(180deg, #FEFEFE 0%, #F6F6F6 100%));
-}

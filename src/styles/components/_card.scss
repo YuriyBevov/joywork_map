@@ -1,7 +1,14 @@
 .card {
-  width: 100%;
-  max-width: 300px;
+  /*width: 100%;
+  max-width: 300px;*/
+  flex-grow: 1;
+  max-width: calc(100% / 3);
   padding: 10px;
+
+  /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+  @include m-b-down(1600px) {
+    max-width: 50%;
+  }
 
   address {
     font-style: normal;
@@ -9,9 +16,10 @@
 
   &__preview-image {
     width: 100%;
-    max-width: 280px;
+    height: auto;
+    /*max-width: 280px;
     height: 100%;
-    max-height: 180px;
+    max-height: 180px;*/
     object-fit: contain;
   }
 
@@ -29,16 +37,23 @@
 
   &__row {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 12px;
 
     &-side {
       display: flex;
       align-items: center;
+      margin-bottom: 10px;
+
+      button:first-child {
+        margin-left: 0;
+      }
     }
 
     &-side:nth-child(1) {
       margin-right: auto;
+      padding-right: 10px;
     }
   }
 }
