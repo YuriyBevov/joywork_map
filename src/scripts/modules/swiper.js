@@ -25,3 +25,20 @@ if(slider) {
       },
     });
 }
+
+const mainSliders = document.querySelectorAll('.main-slider');
+
+if(mainSliders) {
+  mainSliders.forEach(slider => {
+    new Swiper(slider, {
+      slidesPerView: 1,
+
+      spaceBetween: 15,
+
+      navigation: {
+        nextEl: '.main-slider-button-next',
+        prevEl: '.main-slider-button-prev',
+      },
+    });
+  });
+}

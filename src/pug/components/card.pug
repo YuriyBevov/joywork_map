@@ -1,6 +1,21 @@
 .card
-  a(href="#" data-modal-anchor="about").card__row
-    img(src="./assets/img/object-img.png" alt="" width="280" height="180").card__preview-image
+  .card__row
+    .swiper.main-slider
+      .swiper-wrapper
+        .swiper-slide
+          a(href="#" data-modal-anchor="about")
+            img(src="./assets/img/object-img.png" alt="" width="280" height="180").card__preview-image
+
+        .swiper-slide
+          a(href="#" data-modal-anchor="about")
+            img(src="./assets/img/object-img.png" alt="" width="280" height="180").card__preview-image
+
+        .swiper-slide
+          a(href="#" data-modal-anchor="about")
+            img(src="./assets/img/object-img.png" alt="" width="280" height="180").card__preview-image
+
+      .main-slider-button-prev.swiper-button-prev
+      .main-slider-button-next.swiper-button-next
 
   .card__row
     .card__row-side
